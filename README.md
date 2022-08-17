@@ -5,8 +5,5 @@
 
 - Unify styles into stylesheet
 - Gallery?
-- Adjust background imae to not cover header
-- Split header and footer content[^1]
-
-
-[^1]: May fix previous issue
+- Adjust background image to not cover header
+- Split header and footer content (May fix previous issue)
