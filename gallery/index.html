@@ -1,84 +1,183 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>
-		Synergy Auto Repair- Gallery
-		</title>
-			<style>
-				.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <title>
+    Synergy Auto Repair- Gallery
+  </title>
+  <style>
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
 
-.sidenav a:hover {
-  color: #c21b1b;
-}
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
 
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
+    .sidenav a:hover {
+      color: #c21b1b;
+    }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-			</style>
-	</head>
-	
-<link rel="icon" type="image/x-Colour Logo.jpg" href="Colour Logo.jpg">
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
 
-	<!--Resize background image-->
-	<body background="B&W Logo.jpg">
-<a name="Top"></a>
+    @media screen and (max-height: 450px) {
+      .sidenav {
+        padding-top: 15px;
+      }
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="SynergyAuto.html">Home</a>
-  <a href="SynergyServices.html">Services</a>
-  <a href="SynergyGallery.html">Gallery</a>
-  <a href="SynergyContact.html">Contact</a>
-</div>
+      .sidenav a {
+        font-size: 18px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="../global_assets/styles/slideshow.css">
+</head>
 
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+<link rel="icon" type="image/png" href="../global_assets/images/Colour_Logo_no-bg.png">
 
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
+<!--Resize background image-->
 
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-</script>
+<body style="background:url(../global_assets/images/B&W_Logo.jpg); background-size:cover; background-repeat: no-repeat;">
+  <a name="Top"></a>
 
-<img src="Colour Logo.jpg" align="right" height="200" width="200">
-		
-		<font face="Slab Serrif" size="5">
-	<h1 align="center">Gallery</h1><!--Move heading up on the page-->
-		</font>		
-<hr size="3" color="#c21b1b"/>
-<!--I want a slideshow lol :(-->
-	
-	</body>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="../home/index.html">Home</a>
+    <a href="../services/index.html">Services</a>
+    <a href="../gallery/index.html"><b>Gallery</b></a>
+    <a href="../contact/index.html">Contact</a>
+  </div>
+
+  <span style="font-size:30px;cursor:pointer;text-align: left;" onclick="openNav()">&#9776; </span>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+
+  <img src="../global_assets/images/Colour_Logo.jpg" align="right" height="200" width="200">
+
+  <font face="Slab Serrif" size="5">
+    <h1 align="center">Gallery</h1>
+    <!--Move heading up on the page-->
+  </font>
+  <hr size="3" color="#c21b1b" />
+  <!--I want a slideshow lol :(-->
+
+  <script>
+    let slideIndex = 1;
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+
+    function resizeContainer(){
+      /*const fs = require("fs");
+      const imgDir = "./gallery_images";
+      let container = getElementById("img-container");
+
+      fs.readdir(imgDir, (err, files) => {
+
+      })*/
+      /*var img = new Image();
+      img.onload = function() {
+        alert(this.width + 'x' + this.height);
+      }
+      img.src = 'http://www.google.com/intl/en_ALL/images/logo.gif';*/
+      console.log("test")
+      $.getJSON('./gallery_images', data => {
+        console.log(data); //["doc1.jpg", "doc2.jpg", "doc3.jpg"] 
+      });
+    }
+  </script>
+  <!-- Slideshow container -->
+  <div id="img-container" class="slideshow-container" style="width:40%; align-self: center; background-color: black;">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="./gallery_images/oldmeme.jpeg" style="width:100%">
+      <div class="text">Caption Text</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="./gallery_images/annoying_orange.jpg" style="width: 100%">
+      <div class="text">Caption Two</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="./gallery_images/oldmeme.jpeg" style="width:100%">
+      <div class="text">Caption Three</div>
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <script>
+    resizeContainer();
+    showSlides(slideIndex);
+  </script>
+  
+</body>
+
 </html>
