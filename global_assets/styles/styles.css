@@ -26,7 +26,7 @@
 
 .content {
     background-image: url(../images/B&W_Logo_Faded.jpg);
-    background-size: contain;
+    background-size: 95%;
     background-repeat: no-repeat;
     background-color: white;
     background-position: center;
