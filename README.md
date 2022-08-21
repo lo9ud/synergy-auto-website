@@ -3,4 +3,5 @@
 
 ## TODO:
 
-- Gallery?
+- Gallery
+  - Fix resize issue

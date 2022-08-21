@@ -1,0 +1,69 @@
+.content .block .slideshow-container {
+    align-self: center;
+    justify-self: center;
+    width: 80%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+
+    background-image: url(../images/B&W_Logo_Faded.jpg);
+    transition: background-image 0.5s ease-out ;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+}
+
+.content .block .slideshow-container::before {
+    content: "";
+    height: 10%;
+}
+
+.content .block .slideshow-container .btn-box {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.content .block .slideshow-container span.btn {
+    cursor: pointer;
+    color:black;
+    font-size: 4rem;
+    line-height: 4rem;
+    user-select: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgba(252, 252, 252, 0.705);
+    text-align: center;
+    vertical-align: middle;
+}
+
+.content .block .slideshow-container span.btn:active {
+    color: slategrey;
+}
+
+.content .block .slideshow-container div.dot-box {
+    position: relative;
+    bottom: 0;
+    
+    background-color: rgba(252, 252, 252, 0.705);
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: space-around;
+}
+
+.content .block .slideshow-container div.dot-spacer {
+    width:10%;
+}
+
+.content .block .slideshow-container div.dot {
+    user-select: none;
+    box-sizing: border-box;
+    font-size: 5rem;
+    cursor: pointer;
+    line-height: 3rem;
+}

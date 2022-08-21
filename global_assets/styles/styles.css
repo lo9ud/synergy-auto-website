@@ -96,27 +96,28 @@ hr.rule {
 
 .content .block {
     width: 75%;
-    padding-top: 20px;
-    padding-bottom: 20px;
     background-color: white;
-    background-clip: content-box;
+    box-sizing: border-box;
+    border: 2px solid slategray;
+    border-radius: 5px;
     display: flex;
     flex-flow: column nowrap;
+    justify-content: flex-start;
 }
 
 .content .block.half {
     width: 35%;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
     align-self: stretch;
     align-content: space-between;
 }
 
-.content .block p, .content .block h1 {/* Actual text content (wrapped in <p> tags) */
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 5%;
-    padding-right: 5%;
+.content .block > * {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 
 .content .block h1 {
@@ -133,8 +134,9 @@ hr.rule {
 
 .content .block img {/* Image content */
     align-self: center;
-    max-width: 40%;
-    max-height: 40%;
+    justify-self: center;
+    max-width: 70%;
+    max-height: 70%;
     padding-top: 5%;
     padding-bottom: 5%;
 }  

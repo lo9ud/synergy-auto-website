@@ -4,8 +4,8 @@
     </title>
     <link rel="stylesheet" href="../global_assets/styles/styles.css">
     <link rel="stylesheet" href="../global_assets/styles/sidenav.css">
-    <link rel="stylesheet" href="../global_assets/styles/slideshow.css">
     <link rel="icon" type="image/png" href="../global_assets/images/Colour_Logo_no-bg.png">
+    
     <script src="../global_assets/scripts/navbar.js"></script>
 </head>
 <body>
@@ -29,16 +29,12 @@
     <div class="content">
         <div class="block">
             <p>
-                A slideshow goes here 
+                A slideshow goes here:
             </p>
-            <p>
-                <br>
-                Time at page render:
-                <?php
-                    date_default_timezone_set("Africa/Johannesburg");
-                    echo date("Y-m-d h:i:s")
-                ?>
-            </p>
+            <?php
+                require("../global_assets/php/slideshow.php");
+                createSlideshow("slideshow0", array_slice(scandir("./gallery_images/"), 2), "./gallery_images/");
+            ?>
         </div>
     </div>
 
