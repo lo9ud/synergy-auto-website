@@ -6,6 +6,46 @@ body {
     justify-content: space-between;
 }
 
+body.redirect {
+    background-image: url(../images/B&W_Logo_Faded.jpg);
+    display: block;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: center;
+    background-clip: fixed;
+    background-size: contain;
+    height: 95%;
+    overflow: hidden;
+    position: fixed;
+}
+
+div.redirect {
+    text-align: center;
+    vertical-align: middle;
+    font: normal normal normal 7vmin Helvetica, serif;
+    backdrop-filter: blur(5px);
+    background-color: rgb(255,255,255,0.1);
+    height: 10vh;
+    width: 100vw;
+    box-sizing: border-box;
+    padding-top: 44vh;
+    padding-bottom: 56vh;
+}
+
+a.top-btn {
+    color: white;
+    text-decoration: none;
+    border: 1px solid red;
+    border-radius: 2px;
+    padding: 10px;
+    background-color: #c31c1c;
+    
+}
+
+a.top-btn:hover {
+    background-color:#c93f3f;
+}
+
 hr.rule {
     border: 0;
     border-top: 3.5px solid #c21b1b;
@@ -120,6 +160,7 @@ hr.rule {
 .footer {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     height: 10%;
     width: 100%;
     font: normal normal normal 1rem "Slab Serif", "Times New Roman", serif;

@@ -45,6 +45,6 @@
     <hr class="rule">
 
     <div class="footer">
-        <span class="top-btn">Top</span>
+        <span class="top-btn" href="#top">Top</span>
     </div>
 </body>
