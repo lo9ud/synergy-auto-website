@@ -1,9 +1,10 @@
 <head>
     <title>
-        Synergy Auto Repair - Services
+        Synergy Auto Repair - Gallery
     </title>
     <link rel="stylesheet" href="../global_assets/styles/styles.css">
     <link rel="stylesheet" href="../global_assets/styles/sidenav.css">
+    <link rel="stylesheet" href="../global_assets/styles/slideshow.css">
     <link rel="icon" type="image/png" href="../global_assets/images/Colour_Logo_no-bg.png">
     <script src="../global_assets/scripts/navbar.js"></script>
 </head>
@@ -19,45 +20,24 @@
             <a href="../gallery/">Gallery</a>
             <a href="../contact/">Contact</a>
         </div>
-        <span class="title" >Services</span>
+        <span class="title" >Gallery</span>
         <img class="logo"/>
     </div>
 
     <hr class="rule">
-
+    
     <div class="content">
-
-        <div class="block half">
-            <h1>Repair</h1>
-            <p>
-                we do repairs
-            </p>
-        </div>
-
-        <div class="block half">
-            <h1>Restoration</h1>
-            <p>
-                we do restoration
-            </p>
-        </div>
-
-        <div class="block half">
-            <h1>Something else?</h1>
-            <p>
-                we do this other thing
-            </p>
-        </div>
-
-        <div class="block half">
-            <h1>Another thing</h1>
-            <p>
-                and another other thing
-            </p>
-        </div>
-
         <div class="block">
             <p>
-                Get a quote: <a href="../contact/">Contact Us</a>
+                A slideshow goes here 
+            </p>
+            <p>
+                <br>
+                Time at page render:
+                <?php
+                    date_default_timezone_set("Africa/Johannesburg");
+                    echo date("Y-m-d h:i:s")
+                ?>
             </p>
         </div>
     </div>
