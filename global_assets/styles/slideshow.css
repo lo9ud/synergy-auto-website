@@ -1,3 +1,7 @@
+:root {
+    --btn-overlay: rgba(255, 255, 255, 0.6)
+}
+
 .content .block .slideshow-container {
     align-self: center;
     justify-self: center;
@@ -31,14 +35,20 @@
     cursor: pointer;
     color:black;
     font-size: 4rem;
-    line-height: 4rem;
+    line-height: 3rem;
     user-select: none;
-    padding: 0 1rem;
+    padding: 0 0.3rem 0.5rem 0.3rem;
     margin: 0;
     box-sizing: border-box;
-    background-color: rgba(252, 252, 252, 0.705);
+    background-color: var(--btn-overlay);
     text-align: center;
     vertical-align: middle;
+}
+
+.content .block.half .slideshow-container span.btn {
+    font-size: 2rem;
+    line-height: 1.5rem;
+    padding: 0 0.15rem 0.25rem 0.15rem;
 }
 
 .content .block .slideshow-container span.btn:active {
@@ -48,11 +58,10 @@
 .content .block .slideshow-container div.dot-box {
     position: relative;
     bottom: 0;
-    
-    background-color: rgba(252, 252, 252, 0.705);
+    background-color: var(--btn-overlay);
     display: flex;
     width: 100%;
-    height: 10%;
+    height: 6%;
     justify-content: space-around;
 }
 
@@ -62,13 +71,13 @@
 
 .content .block .slideshow-container div.dot {
     user-select: none;
-    box-sizing: border-box;
+    background-clip: padding-box;
     font-size: 5rem;
     cursor: pointer;
-    line-height: 3rem;
+    line-height: 2rem;
 }
 
 .content .block.half .slideshow-container div.dot {
     font-size: 2.5rem;
-    line-height: 1.5rem;
+    line-height: 1rem;
 }

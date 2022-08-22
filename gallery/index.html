@@ -1,0 +1,54 @@
+
+<!-- A baked version of index.php -->
+
+
+<head>
+    <title>
+        Synergy Auto Repair - Gallery
+    </title>
+    <link rel="stylesheet" href="../global_assets/styles/styles.css">
+    <link rel="stylesheet" href="../global_assets/styles/slideshow.css">
+    <script src="../global_assets/scripts/slideshow.js"></script>
+    <link rel="stylesheet" href="../global_assets/styles/sidenav.css">
+    <link rel="icon" type="image/png" href="../global_assets/images/Colour_Logo_no-bg.png">
+    
+    <script src="../global_assets/scripts/navbar.js"></script>
+</head>
+<body>
+    <a name="top"></a>
+
+    <div class="header">
+        <span class="openbtn" onclick="openNav()"> &#9776; </span>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="../home/">Home</a>
+            <a href="../services/">Services</a>
+            <a href="../gallery/">Gallery</a>
+            <a href="../contact/">Contact</a>
+        </div>
+        <span class="title" >Gallery</span>
+        <img class="logo"/>
+    </div>
+
+    <hr class="rule">
+    
+    <div class="content">
+                <div class="block">
+            <h1>A slide show</h1>
+            <div id="slideshow0" class="slideshow-container"><script>slideshow0 = new Slideshow("slideshow0", ["car1.jfif", "car2.jfif"], "./gallery_images/", [300, 168]);</script><div  class="btn-box"><span class="btn" onclick="slideshow0.prevSlide()">&#xab;</span><span class="btn" onclick="slideshow0.nextSlide()">&#xbb;</span></div><div class="dot-box"><div class="dot-spacer"></div><div class="dot" onclick="slideshow0.setSlide(1)" data-index="0" data-id="slideshow0">&#xb7;</div><div class="dot-spacer"></div><div class="dot" onclick="slideshow0.setSlide(2)" data-index="1" data-id="slideshow0">&#xb7;</div><div class="dot-spacer"></div></div><script>slideshow0.init();window.onresize = function resize(){setTimeout(slideshow0.init, 1000)};</script></div>        </div>
+
+        <div class="block half">
+            <h1>A second slide show</h1>
+            <div id="slideshow1" class="slideshow-container"><script>slideshow1 = new Slideshow("slideshow1", ["car1.jfif", "car2.jfif"], "./gallery_images/", [300, 168]);</script><div  class="btn-box"><span class="btn" onclick="slideshow1.prevSlide()">&#xab;</span><span class="btn" onclick="slideshow1.nextSlide()">&#xbb;</span></div><div class="dot-box"><div class="dot-spacer"></div><div class="dot" onclick="slideshow1.setSlide(1)" data-index="0" data-id="slideshow1">&#xb7;</div><div class="dot-spacer"></div><div class="dot" onclick="slideshow1.setSlide(2)" data-index="1" data-id="slideshow1">&#xb7;</div><div class="dot-spacer"></div></div><script>slideshow1.init();window.onresize = function resize(){setTimeout(slideshow1.init, 1000)};</script></div>        </div>
+
+        <div class="block half">
+            <h1>A third slide show here</h1>
+            <div id="slideshow2" class="slideshow-container"><script>slideshow2 = new Slideshow("slideshow2", ["car1.jfif", "car2.jfif"], "./gallery_images/", [300, 168]);</script><div  class="btn-box"><span class="btn" onclick="slideshow2.prevSlide()">&#xab;</span><span class="btn" onclick="slideshow2.nextSlide()">&#xbb;</span></div><div class="dot-box"><div class="dot-spacer"></div><div class="dot" onclick="slideshow2.setSlide(1)" data-index="0" data-id="slideshow2">&#xb7;</div><div class="dot-spacer"></div><div class="dot" onclick="slideshow2.setSlide(2)" data-index="1" data-id="slideshow2">&#xb7;</div><div class="dot-spacer"></div></div><script>slideshow2.init();window.onresize = function resize(){setTimeout(slideshow2.init, 1000)};</script></div>        </div>
+    </div>
+
+    <hr class="rule">
+
+    <div class="footer">
+        <span class="top-btn" href="#top">Top</span>
+    </div>
+</body>

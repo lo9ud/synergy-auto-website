@@ -91,12 +91,15 @@ hr.rule {
     justify-content: center;
     align-content: center;
     align-items: center;
-    font: normal normal normal 1.5rem Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
 }
 
 .content > * {
     margin-top: 2.5%;
     margin-bottom: 2.5%;
+    
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 .content .block {
@@ -119,22 +122,38 @@ hr.rule {
 }
 
 .content .block > * {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.content .block p {
+    font-size: 1.5rem;
+    margin-left: 5%;
+}
+
+.content .block p:not(:only-child) {
+    margin-left: 12%;
 }
 
 .content .block h1 {
-    padding-bottom: 0;
+    font-size: 2.5rem;
+    margin-left: 9%;
 }
 
-.content .block h1 + p {
-    padding-top: 0;
+.content .block.half p {
+    font-size: 1rem;
+    margin-left: 5%;
 }
 
-.content .block + h1 {
-    padding-top: 0;
+.content .block.half p:not(:only-child) {
+    margin-left: 12%;
+}
+
+.content .block.half h1 {
+    font-size: 1.25rem;
+    margin-left: 9%;
 }
 
 .content .block img {/* Image content */
@@ -152,13 +171,19 @@ hr.rule {
 }
 
 .content .block table {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    border: none;
+}
+
+.content .block table:only-child {
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 .content .block table.contact * th{
     text-align: right;
-    width: fit-content;
+    width: 10%;
 }
 .content .block table.contact * td{
     text-align: left;
