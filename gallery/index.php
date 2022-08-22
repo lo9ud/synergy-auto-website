@@ -23,7 +23,9 @@
             <a href="../contact/">Contact</a>
         </div>
         <span class="title" >Gallery</span>
-        <img class="logo"/>
+        <a href="../home/" class="logo">
+            <img class="logo"/>
+        </a>
     </div>
 
     <hr class="rule">
@@ -55,6 +57,6 @@
     <hr class="rule">
 
     <div class="footer">
-        <span class="top-btn" href="#top">Top</span>
+        <a class="top-btn" href="#top">Top</a>
     </div>
 </body>
