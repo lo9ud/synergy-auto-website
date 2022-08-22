@@ -24,8 +24,6 @@
         
 
         echo "<div id=\"" . $id . "\" class=\"slideshow-container\">";
-            echo"<link rel=\"stylesheet\" href=\"../global_assets/styles/slideshow.css\">";
-            echo "<script src=\"../global_assets/scripts/slideshow.js\"></script>";
             echo "<script>";
             echo $id . " = new Slideshow(\"" . $id . "\", [\"" . join("\", \"", $files) . "\"], \"" . $rootfolder . "\", [" . $maxwidth . ", " . $maxheight . "]);";
             echo "</script>";

@@ -94,6 +94,11 @@ hr.rule {
     font: normal normal normal 1.5rem Helvetica, sans-serif;
 }
 
+.content > * {
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}
+
 .content .block {
     width: 75%;
     background-color: white;

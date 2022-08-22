@@ -3,6 +3,8 @@
         Synergy Auto Repair - Gallery
     </title>
     <link rel="stylesheet" href="../global_assets/styles/styles.css">
+    <link rel="stylesheet" href="../global_assets/styles/slideshow.css">
+    <script src="../global_assets/scripts/slideshow.js"></script>
     <link rel="stylesheet" href="../global_assets/styles/sidenav.css">
     <link rel="icon" type="image/png" href="../global_assets/images/Colour_Logo_no-bg.png">
     
@@ -27,13 +29,25 @@
     <hr class="rule">
     
     <div class="content">
+        <?php require("../global_assets/php/slideshow.php"); ?>
         <div class="block">
-            <p>
-                A slideshow goes here:
-            </p>
+            <h1>A slide show</h1>
             <?php
-                require("../global_assets/php/slideshow.php");
                 createSlideshow("slideshow0", array_slice(scandir("./gallery_images/"), 2), "./gallery_images/");
+            ?>
+        </div>
+
+        <div class="block half">
+            <h1>A second slide show</h1>
+            <?php
+                createSlideshow("slideshow1", array_slice(scandir("./gallery_images/"), 2), "./gallery_images/");
+            ?>
+        </div>
+
+        <div class="block half">
+            <h1>A third slide show here</h1>
+            <?php
+                createSlideshow("slideshow2", array_slice(scandir("./gallery_images/"), 2), "./gallery_images/");
             ?>
         </div>
     </div>
