@@ -46,12 +46,6 @@
             ?>
         </div>
 
-        <div class="block half">
-            <h1>A third slide show here</h1>
-            <?php
-                createSlideshow("slideshow2", array_slice(scandir("./gallery_images/"), 2), "./gallery_images/");
-            ?>
-        </div>
     </div>
 
     <hr class="rule">
